@@ -1,0 +1,68 @@
+﻿@model Product
+@{
+    ViewData["Title"] = "Ürün Ekle";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Yeni Kategori Oluştur</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form role="form" asp-action="Create" asp-controller="Product" method="post" enctype="multipart/form-data">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Ürün Adı</label>
+                                <input asp-for="ProductName" type="text" class="form-control" placeholder="ürün adı girin">
+                            </div>
+                            <div class="form-group">
+                                <label>Fiyat</label>
+                                <input asp-for="UnitPrice" type="text" class="form-control" placeholder="fiyat girin">
+                            </div>
+                            <div class="form-group">
+                                <label>Stok</label>
+                                <input asp-for="Quantity" type="text" class="form-control" placeholder="stok adet girin">
+                            </div>
+                           <div class="form-group">
+                               <label>Kategori:</label>
+                               <select class="form-control custom-select" asp-for="CategoryID" asp-items="ViewBag.MainCategories">
+                                   <option selected="" disabled>Lütfen Kategori Seçin</option>
+                               </select>
+                           </div>
+                            <div class="form-group">
+                                <label>Resim Ekle</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="exampleInputFile" name="image" />
+                                        <label class="custom-file-label" for="exampleInputFile">Fotoğraf Seç</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Oluştur</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section scripts{ 
+    <script src="~/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script>
+        
+    $(document).ready(function () {
+        bsCustomFileInput.init();
+    });
+</script>
+}
+

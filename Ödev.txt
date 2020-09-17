@@ -1,0 +1,13 @@
+//Her bir entity için Service ve repository oluþturun.//Ayþe, Elif, Ayþegül, Yavuz Selim
+//MVC katmaný içerisinde MVC service ekleyerek projeyi ayaða kaldýrým. Admin ve Member isminde Area oluþturun.//Yavuz Selim, Elif
+//Kullanýcý giriþ iþlemi için login yapýsýný tanýmlayýn. Giriþ yapan kullanýcýnýn rolü admin ise Admin area'ya member ise member areaya yönlendirin.//Elif, Yavuz Selim
+//Crud (Entity) iþlemleri Admin Area da her bir entity için bir sayfa oluþturup iþlemleri tanýmlayýn.
+
+
+//30.05
+//ziyaretçiler görüntüleyeceði tasarým
+//admin panel içerisinde ürün ekleme, silme,güncelleme,
+
+//31.05
+--sepet tasarýmý
+-- Loginiþlemleri

@@ -1,0 +1,46 @@
+﻿@model Category
+@{
+    ViewData["Title"] = "Yeni Kategori";
+    Layout = "~/Areas/Admin/Views/_AdminLayout.cshtml";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h2>Yeni Kategori Oluştur</h2>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="card card-primary">
+                    <!-- /.card-header -->
+                    <!-- form start -->
+                    <form role="form" asp-action="Create" asp-controller="Category" method="post">
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label>Kategori Adı</label>
+                                <input asp-for="CategoryName" type="text" class="form-control" placeholder="kategori adı girin">
+                            </div>
+                            <div class="form-group">
+                                <label>Ana Kategori</label>
+                                <select class="form-control custom-select" asp-items=" ViewBag.MainCategories">
+                                    <option disabled selected="">Lütfen Ana Kategori Seçin</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label >Kategori Açıklama</label>
+                                <input asp-for="Description" type="text" class="form-control"  placeholder="Kategori Açıklama Girin">
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            <button type="submit" class="btn btn-primary">Oluştur</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
